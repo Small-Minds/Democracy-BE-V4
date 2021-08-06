@@ -71,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test, lint]
     # Make sure to change this to f*&%*!*^ 'main' if needed.
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -79,7 +79,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: "refs/heads/main"
+          ref: "refs/heads/master"
           fetch-depth: 0
 
       - name: Set up Python 3.8.*
@@ -100,4 +100,3 @@ jobs:
       - name: Semantic Release Publish
         run: |
           semantic-release publish -v DEBUG
-

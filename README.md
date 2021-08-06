@@ -14,7 +14,7 @@ The _Democracy_ project by _Small Minds_ is designed to:
 1. Ensure election runners can restrict applicants by email domain.
 1. Use simple email verification to ensure users are part of any given org.
 
-A frontend will be provided to fulfill these goals.
+Frontend: [Democracy-PWA-V3](https://github.com/Small-Minds/Democracy-PWA-V3)
 
 ## Contributing
 

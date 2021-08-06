@@ -1,6 +1,6 @@
 # Democracy
 
-![CI](https://github.com/Small-Minds/Democracy/workflows/CI/badge.svg)
+[![CI](https://github.com/Small-Minds/Democracy-BE-V3/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Small-Minds/Democracy-BE-V3/actions/workflows/ci.yml)
 
 **SOURCE CODE COPYRIGHT (C) SMALL MINDS 2020**
 

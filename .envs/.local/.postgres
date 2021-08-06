@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=democracy
+POSTGRES_USER=lyWseqTBCwaJmewskVjaSTukcQUkgoFf
+POSTGRES_PASSWORD=W9geotN72lp1rzmWy1y0P0ztPYKMXaaNKkl8oP8DrFoZjwGCgPORBFHjPbetwlpq

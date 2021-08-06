@@ -1,0 +1,15 @@
+{% load static %}
+
+Welcome, {{ user.email }}!
+
+
+Please click this link to verify your email address:
+{{ domain }}{{ activate_url }}
+
+We hope you enjoy running and participating in elections on our platform.
+
+
+Thanks for using Democracy,
+
+Ryan and Max
+https://smallminds.dev

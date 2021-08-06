@@ -1,0 +1,7 @@
+{% autoescape off %}
+<p>Hi {{ user.email_address }},</p>
+
+<p>Please click on the link to confirm your new email:</p>
+
+<a href="{{ domain }}{{ activate_url }}">{{ domain }}{{ activate_url }}</a>
+{% endautoescape %}}

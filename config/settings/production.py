@@ -12,17 +12,7 @@ from .base import env
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list(
-    "DJANGO_ALLOWED_HOSTS",
-    default=[
-        "sm-democracy-v1.herokuapp.com",
-        "democracy-prod.netlify.app",
-        "democracy-backend.ryanfleck.ca",
-        "democracy-be.ryanfleck.ca",
-        "democracy.be.ryanfleck.ca",
-        "democracy.api.ryanfleck.ca",
-    ],
-)
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", str)
 
 # DATABASES
 # ------------------------------------------------------------------------------
@@ -214,4 +204,4 @@ sentry_sdk.init(
 
 # CORS origins dictate where requests can come from.
 # Record in envs as CORS_ALLOWED_ORIGINS=domain1,domain2,domain3
-CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", str, [])
+CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", str)

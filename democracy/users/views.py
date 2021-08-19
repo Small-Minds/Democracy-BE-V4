@@ -61,11 +61,9 @@ class ConfirmEmailView(APIView):
 
     permission_classes = [AllowAny]
 
-    success_redirect_url = f"{settings.FRONTEND_BASE_URL}/email-verified"
-    already_verified_redirect_url = (
-        f"{settings.FRONTEND_BASE_URL}/email-already-verified"
-    )
-    failure_redirect_url = f"{settings.FRONTEND_BASE_URL}/email-verification-error"
+    success_redirect_url = f"{settings.FRONTEND_URL}/email-verified"
+    already_verified_redirect_url = f"{settings.FRONTEND_URL}/email-already-verified"
+    failure_redirect_url = f"{settings.FRONTEND_URL}/email-verification-error"
 
     def get_queryset(self):
         queryset = EmailConfirmation.objects.all_valid()

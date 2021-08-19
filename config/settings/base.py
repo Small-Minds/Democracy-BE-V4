@@ -336,5 +336,5 @@ INSTALLED_APPS = [
     "democracy.swagger.apps.SwaggerConfig",
 ] + INSTALLED_APPS  # noqa F405
 
-# Frontend Base URL
-FRONTEND_BASE_URL = "https://democracy.smallminds.dev"
+# Frontend URL (must not have leading slash.) example: https://democracy.smallminds.dev
+FRONTEND_URL = env.str("FRONTEND_URL")

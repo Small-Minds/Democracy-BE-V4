@@ -75,4 +75,4 @@ CORS_ALLOW_ALL_ORIGINS = True
 # ] + INSTALLED_APPS  # noqa F405
 
 # Frontend Base URL
-FRONTEND_BASE_URL = "http://localhost:3000"
+FRONTEND_URL = "http://localhost:3000"

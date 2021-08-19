@@ -40,6 +40,6 @@ class CustomPasswordResetSerializer(PasswordResetSerializer):
     def get_email_options(self):
         """Override this method to change default e-mail options."""
         print("\n\nGETTING EMAIL OPTIONS\n\n")
-        frontend_url = getattr(settings, "FRONTEND_BASE_URL", None)
+        frontend_url = getattr(settings, "FRONTEND_URL", None)
         print(f"\n\nSETTING OVERRIDE: {frontend_url}\n\n")
         return {"domain_override": frontend_url}

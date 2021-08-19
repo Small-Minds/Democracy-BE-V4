@@ -89,6 +89,37 @@ To get to BASH in Heroku, download the CLI and use the following command:
 heroku run -a sm-democracy-v1 bash
 ```
 
+## Deployment
+
+Fork the repository and deploy to Heroku.
+
+Add free tiers of Postgres, Redis, Sentry, and your logger of choice (PaperTrail?)
+
+Add the following environment variables to Heroku. You will need to register for a few of the services.
+
+```shell
+AWS_ACCESS_KEY_SES=AKA...
+AWS_SECRET_KEY_SES=4nQ...
+CORS_ALLOWED_ORIGINS=https://sm-democracy-v1.herokuapp.com,https://democracy.smallminds.dev
+DATABASE_URL=postgres://uuxcdrl...
+DEBUG_COLLECTSTATIC=FALSE
+DJANGO_ADMIN_URL=admin/gm...sdqk/
+DJANGO_DEBUG=False
+DJANGO_SECRET_KEY=Fy90k
+DJANGO_SETTINGS_MODULE=config.settings.production
+LOGDNA_KEY=["19...0d"]
+PAPERTRAIL_API_TOKEN=a...
+PYTHONHASHSEED=random
+REDIS_TLS_URL=rediss://:p48byxee...
+REDIS_URL=redis://:p48byc...
+SENTRY_DSN=https://f1by0x...
+USE_DOCKER=False
+DJANGO_ALLOWED_HOSTS=https://sm-democracy-v1.herokuapp.com,https://democracy.smallminds.dev
+FRONTEND_URL=https://democracy.smallminds.dev
+```
+
+
+
 ## Backup or Restore Database Dump
 
 <https://devcenter.heroku.com/articles/heroku-postgres-import-export>

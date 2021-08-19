@@ -91,32 +91,34 @@ heroku run -a sm-democracy-v1 bash
 
 ## Deployment
 
-Fork the repository and deploy to Heroku.
+**Easy mode:** Fork the repository and deploy to Heroku. Deploy the frontend to Netlify.
 
 Add free tiers of Postgres, Redis, Sentry, and your logger of choice (PaperTrail?)
 
-Add the following environment variables to Heroku. You will need to register for a few of the services.
+Register for AWS SES to deliver emails to your voting demographic.
+
+Add the following environment variables to Heroku (some of them will be added automatically):
 
 ```dotenv
 AWS_ACCESS_KEY_SES=AKA...
 AWS_SECRET_KEY_SES=4nQ...
-CORS_ALLOWED_ORIGINS=https://sm-democracy-v1.herokuapp.com,https://democracy.smallminds.dev
-DATABASE_URL=postgres://uuxcdrl...
+CORS_ALLOWED_ORIGINS=https://app.herokuapp.com,https://democracy.abce.fg
 DEBUG_COLLECTSTATIC=FALSE
 DJANGO_ADMIN_URL=admin/gm...sdqk/
 DJANGO_DEBUG=False
 DJANGO_SECRET_KEY=Fy90k
 DJANGO_SETTINGS_MODULE=config.settings.production
-LOGDNA_KEY=["19...0d"]
-PAPERTRAIL_API_TOKEN=a...
 PYTHONHASHSEED=random
-REDIS_TLS_URL=rediss://:p48byxee...
-REDIS_URL=redis://:p48byc...
-SENTRY_DSN=https://f1by0x...
 USE_DOCKER=False
 DJANGO_ALLOWED_HOSTS=sm-democracy-v1.herokuapp.com,democracy.smallminds.dev
 FRONTEND_URL=https://democracy.smallminds.dev
+
+DATABASE_URL=postgres://uuxcdrl...
+REDIS_TLS_URL=rediss://:p48byxee...
+REDIS_URL=redis://:p48byc...
 ```
+
+You'll need to login to the app with heroku CLI to make an administrator account.
 
 
 
@@ -127,6 +129,6 @@ FRONTEND_URL=https://democracy.smallminds.dev
 You'll need to paste the password from the docker compose configs when prompted.
 
 ```ps
-PS C:\vc\sm\Democracy\backups\ieee_ess_2021>
-pg_restore --verbose --clean --no-acl --no-owner -d localhost:5432 -U lyWseqTBCwaJmewskVjaSTukcQUkgoFf -d democracy .\latest.dump
+PS X:\backup\location\>
+pg_restore --verbose --clean --no-acl --no-owner -d <destination> -U <username> -d democracy .\latest.dump
 ```

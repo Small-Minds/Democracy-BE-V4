@@ -213,11 +213,5 @@ sentry_sdk.init(
 # ------------------------------------------------------------------------------
 
 # CORS origins dictate where requests can come from.
-CORS_ALLOWED_ORIGINS = [
-    "https://democracy-prod.netlify.app",
-    "https://democracy.smallminds.dev",
-    "https://democracy.ryanfleck.ca",
-    "https://democracy-alpha-1.smallminds.dev",
-    "https://democracy-alpha-2.smallminds.dev",
-    "https://democracy-alpha-3.smallminds.dev",
-]
+# Record in envs as CORS_ALLOWED_ORIGINS=domain1,domain2,domain3
+CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS", str, [])

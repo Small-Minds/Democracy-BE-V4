@@ -97,7 +97,7 @@ Add free tiers of Postgres, Redis, Sentry, and your logger of choice (PaperTrail
 
 Add the following environment variables to Heroku. You will need to register for a few of the services.
 
-```shell
+```dotenv
 AWS_ACCESS_KEY_SES=AKA...
 AWS_SECRET_KEY_SES=4nQ...
 CORS_ALLOWED_ORIGINS=https://sm-democracy-v1.herokuapp.com,https://democracy.smallminds.dev
@@ -114,7 +114,7 @@ REDIS_TLS_URL=rediss://:p48byxee...
 REDIS_URL=redis://:p48byc...
 SENTRY_DSN=https://f1by0x...
 USE_DOCKER=False
-DJANGO_ALLOWED_HOSTS=https://sm-democracy-v1.herokuapp.com,https://democracy.smallminds.dev
+DJANGO_ALLOWED_HOSTS=sm-democracy-v1.herokuapp.com,democracy.smallminds.dev
 FRONTEND_URL=https://democracy.smallminds.dev
 ```
 

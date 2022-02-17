@@ -1,6 +1,9 @@
 # Democracy
 
 [![CI](https://github.com/Small-Minds/Democracy-BE-V3/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Small-Minds/Democracy-BE-V3/actions/workflows/ci.yml)
+[![Updates](https://pyup.io/repos/github/Small-Minds/Democracy-BE-V3/shield.svg)](https://pyup.io/repos/github/Small-Minds/Democracy-BE-V3/)
+[![Python 3](https://pyup.io/repos/github/Small-Minds/Democracy-BE-V3/python-3-shield.svg)](https://pyup.io/repos/github/Small-Minds/Democracy-BE-V3/)
+
 
 **SOURCE CODE COPYRIGHT (C) SMALL MINDS 2020**
 

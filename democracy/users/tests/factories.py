@@ -13,8 +13,7 @@ class UserFactory(DjangoModelFactory):
 
     @post_generation
     def password(self, create: bool, extracted: Sequence[Any], **kwargs):
-        locale = "en_US"
-        faked_password = "as9df79a8s7df9..!!$$(*)%)(*^a8s7df98as7dffdsfa89a9s8fd"
+        faked_password = r"as9df79a8s7df9..!!$$(*)%)(*^a8s7df98as7dffdsfa89a9s8fd"
         self.set_password(extracted if extracted else faked_password)
 
     class Meta:

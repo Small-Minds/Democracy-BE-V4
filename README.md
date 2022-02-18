@@ -135,3 +135,15 @@ You'll need to paste the password from the docker compose configs when prompted.
 PS X:\backup\location\>
 pg_restore --verbose --clean --no-acl --no-owner -d <destination> -U <username> -d democracy .\latest.dump
 ```
+
+## Standards
+
+Pre-Commit is used to enforce code style.
+
+```
+# Everywhere Sane
+pre-commit run --all
+
+# On Windows
+pyenv exec pre-commit run --all
+```

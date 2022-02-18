@@ -159,6 +159,9 @@ class PublicElectionParticipantViewSet(
         setCache(Keys.PUBLIC_ELECTION_SHORT, election.id, data)
         return Response(data)
 
+    def get_serializer_class(self):
+        return None
+
 
 class ElectionParticipantViewSet(
     GenericViewSet,

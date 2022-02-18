@@ -11,7 +11,6 @@ django-stubs==1.9.0  # https://github.com/typeddjango/django-stubs
 pytest==7.0.1  # https://github.com/pytest-dev/pytest
 pytest-sugar==0.9.4  # https://github.com/Frozenball/pytest-sugar
 pre-commit==2.17.0  # https://github.com/pre-commit/pre-commit
-pylint-django==2.5.1  # https://github.com/PyCQA/pylint-django
 pytest-cov==3.0.0  # https://pypi.org/project/pytest-cov/
 coverage==6.3.1  # https://pypi.org/project/coverage/
 pytest-xdist==2.5.0  # https://github.com/pytest-dev/pytest-xdist
@@ -26,7 +25,7 @@ sphinx-autobuild==2021.3.14 # https://github.com/GaretJax/sphinx-autobuild
 flake8==4.0.1  # https://github.com/PyCQA/flake8
 flake8-isort==4.1.1  # https://github.com/gforcada/flake8-isort
 black==22.1.0  # https://github.com/ambv/black
-pylint-django==2.5.1  # https://github.com/PyCQA/pylint-django
+pylint-django==2.5.2  # https://github.com/PyCQA/pylint-django
 
 # Django
 # ------------------------------------------------------------------------------

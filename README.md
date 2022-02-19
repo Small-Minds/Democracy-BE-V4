@@ -147,3 +147,10 @@ pre-commit run --all
 # On Windows
 pyenv exec pre-commit run --all
 ```
+
+## New DB Parameters
+
+```
+docker-compose run django python manage.py makemigrations
+docker-compose run django python manage.py migrate
+```

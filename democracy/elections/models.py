@@ -38,6 +38,7 @@ class Election(Model):
     )
     enable_multiple_submissions = BooleanField(default=False)
     election_email_domain = CharField(max_length=100, blank=True, default="")
+    limit_to_domain = BooleanField(default=True)
     # If not blank, this can be scanned while submitting applications
     whitelist = TextField(blank=True, default="")
     public = BooleanField(default=False)
@@ -47,6 +48,7 @@ class Election(Model):
     submission_start_time = DateTimeField(blank=True, null=True)
     submission_end_time = DateTimeField(blank=True, null=True)
     submission_release_time = DateTimeField(blank=True, null=True)
+
     # VOTING
     voting_start_time = DateTimeField(blank=True, null=True)
     voting_end_time = DateTimeField(blank=True, null=True)
@@ -81,6 +83,8 @@ class Election(Model):
         return self.voting_start_time < now < self.voting_end_time
 
     def eligible_to_vote(self, user: User) -> bool:
+        if not self.limit_to_domain:
+            return True
         return str(user.email_domain).lower() == str(self.election_email_domain).lower()
 
     def apply_uottawa_regex(self, user: User) -> bool:

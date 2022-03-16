@@ -46,24 +46,25 @@ def cacheKey(key: Keys, id: str) -> str:
 def getCache(key: Keys, id: str) -> Dict:
     """Gets an item from the cache of the given type/id."""
     useKey = cacheKey(key, id)
-    print(f"GET key from cache: {useKey}")
+    # print(f"GET key from cache: {useKey}")
     result: Dict = cache.get(useKey)
     if not result:
-        print(f"No key in cache: {useKey}")
+        # print(f"No key in cache: {useKey}")
+        pass
     return result
 
 
 def setCache(key: Keys, id: str, obj: Dict):
     """Stores an item in the django cache based on type and id."""
     useKey = cacheKey(key, id)
-    print(f"PUT key into cache: {useKey}")
+    # print(f"PUT key into cache: {useKey}")
     return cache.set(useKey, obj)
 
 
 def deleteCache(key: Keys, id: str):
     """Removes an item from the Django cache."""
     useKey = cacheKey(key, id)
-    print(f"DELETE key from cache: {useKey}")
+    # print(f"DELETE key from cache: {useKey}")
     return cache.delete(useKey)
 
 
@@ -348,7 +349,7 @@ class VotingViewSet(
                 )
 
         if Ballot.objects.filter(user=request.user, election=election_id).exists():
-            print("User has already voted..")
+            # print("User has already voted..")
             return Response(
                 {"error": "You cannot submit more than one ballot for an election."},
                 status=status.HTTP_406_NOT_ACCEPTABLE,

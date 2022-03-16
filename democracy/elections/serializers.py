@@ -116,14 +116,12 @@ class VoteSerializer(ModelSerializer):
         if vote_type == Vote.VoteTypes.NORMAL:
             if not candidate:
                 err: str = "Must include a candidate with a normal vote."
-                print(err)
                 raise serializers.ValidationError(err)
             return data
 
         # Otherwise, there should be no candidate.
         if candidate:
             err2: str = "You cannot reference a candidate with an ABSTAIN or NO_CONFIDENCE vote."
-            print(err2)
             raise serializers.ValidationError(err2)
 
         return data
@@ -146,7 +144,6 @@ class BallotSerializer(ModelSerializer):
         raise Exception("Updating ballots is not allowed.")
 
     def create(self, validated_data):
-        print(validated_data)
 
         # Ensure a set of votes are present.
         votes: List[Dict] = validated_data.pop("votes")
@@ -158,8 +155,6 @@ class BallotSerializer(ModelSerializer):
             raise serializers.ValidationError(
                 {"election": "Ballot must have election."}
             )
-        else:
-            print(f"Ballot election is {ballot.election}")
 
         for vote_data in votes:
             Vote.objects.create(ballot=ballot, **vote_data)

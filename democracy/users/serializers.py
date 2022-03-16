@@ -26,7 +26,6 @@ class CustomRegisterSerializer(RegisterSerializer):
             "email": self.validated_data.get("email", ""),
             "name": self.validated_data.get("name", ""),
         }
-        print(data)
         return data
 
 
@@ -39,7 +38,5 @@ class CustomPasswordResetSerializer(PasswordResetSerializer):
 
     def get_email_options(self):
         """Override this method to change default e-mail options."""
-        print("\n\nGETTING EMAIL OPTIONS\n\n")
         frontend_url = getattr(settings, "FRONTEND_URL", None)
-        print(f"\n\nSETTING OVERRIDE: {frontend_url}\n\n")
         return {"domain_override": frontend_url}

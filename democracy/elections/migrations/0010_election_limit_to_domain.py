@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('elections', '0009_auto_20210312_0303'),
+        ("elections", "0009_auto_20210312_0303"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='election',
-            name='limit_to_domain',
+            model_name="election",
+            name="limit_to_domain",
             field=models.BooleanField(default=True),
         ),
     ]
